@@ -35,8 +35,7 @@ export default function UpdatePerson(person :Person ) {
 
     setIsMutating(false);
 
-    setPersonName("");
-    setAge("");
+    
     router.refresh();
     setModal(false);
   }
@@ -47,7 +46,7 @@ export default function UpdatePerson(person :Person ) {
 
   return (
     <div>
-      <button className="btn btn-info btn-sm" onClick={handleChange}>
+      <button className="btn btn-info btn-sm mx-4" onClick={handleChange}>
        Update 
       </button>
 
@@ -77,7 +76,7 @@ export default function UpdatePerson(person :Person ) {
               <input
                 type="text"
                 value={age}
-                onChange={(e) => setAge(e.target.value)}
+                onChange={(e) => setAge(Number(e.target.value))}
                 className="input w-full input-bordered"
                 placeholder="Age"
               />
