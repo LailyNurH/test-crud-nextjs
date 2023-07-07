@@ -41,7 +41,7 @@ export default function AddPerson() {
 
   return (
     <div>
-      <button className="btn" onClick={handleChange}>
+      <button className="btn btn-success flex justify-end" onClick={handleChange}>
         Add New
       </button>
 
